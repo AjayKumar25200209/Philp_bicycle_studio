@@ -45,22 +45,25 @@ function Footer() {
   const email = "philipbicyclestudio@gmail.com";
 
   return (
-    <footer className="bg-[#354126] text-[#F8F7F0]">
+    <footer className="border-t-4 border-[#D4AD28] bg-[#111111] text-[#F8F7F0]">
 
       <div className="mx-auto max-w-[1440px] px-6 pb-6 pt-10 sm:px-10 sm:pb-7 sm:pt-12 lg:px-14">
 
-        {/* Main footer columns */}
+        {/* Main Footer Columns */}
         <div className="grid grid-cols-1 gap-9 border-b border-white/15 pb-9 sm:grid-cols-2 sm:gap-x-10 sm:gap-y-10 lg:grid-cols-12 lg:gap-8">
 
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-4">
 
             <Link to="/" className="group inline-flex items-center gap-3">
+
               <div className="flex h-11 w-11 items-center justify-center rounded-full border border-[#D4AD28]/60 bg-[#D4AD28]/10 transition duration-300 group-hover:bg-[#D4AD28]">
+
                 <FaBicycle
                   size={23}
-                  className="text-[#D4AD28] transition group-hover:text-[#354126]"
+                  className="text-[#D4AD28] transition group-hover:text-[#111111]"
                 />
+
               </div>
 
               <div>
@@ -72,6 +75,7 @@ function Footer() {
                   BICYCLE STUDIO
                 </p>
               </div>
+
             </Link>
 
             <h3 className="mt-5 text-2xl font-bold leading-tight sm:text-3xl">
@@ -87,15 +91,15 @@ function Footer() {
               part of your journey.
             </p>
 
-            {/* Social links */}
+            {/* Social Links */}
             <div className="mt-5 flex gap-2.5">
 
               <a
                 href={`https://wa.me/91${phone}`}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 aria-label="WhatsApp"
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-white/80 transition hover:border-[#D4AD28] hover:bg-[#D4AD28] hover:text-[#354126]"
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-white/80 transition hover:border-[#D4AD28] hover:bg-[#D4AD28] hover:text-[#111111]"
               >
                 <FaWhatsapp size={16} />
               </a>
@@ -103,9 +107,9 @@ function Footer() {
               <a
                 href="https://www.facebook.com/"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 aria-label="Facebook"
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-white/80 transition hover:border-[#D4AD28] hover:bg-[#D4AD28] hover:text-[#354126]"
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-white/80 transition hover:border-[#D4AD28] hover:bg-[#D4AD28] hover:text-[#111111]"
               >
                 <FaFacebookF size={14} />
               </a>
@@ -113,9 +117,9 @@ function Footer() {
               <a
                 href="https://www.instagram.com/"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-white/80 transition hover:border-[#D4AD28] hover:bg-[#D4AD28] hover:text-[#354126]"
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-white/80 transition hover:border-[#D4AD28] hover:bg-[#D4AD28] hover:text-[#111111]"
               >
                 <FaInstagram size={16} />
               </a>
@@ -123,7 +127,8 @@ function Footer() {
             </div>
           </div>
 
-          {/* Quick links */}
+
+          {/* Quick Links */}
           <div className="lg:col-span-2">
 
             <h3 className="text-xs font-bold tracking-wider text-[#D4AD28] sm:text-sm">
@@ -147,6 +152,7 @@ function Footer() {
               ))}
             </ul>
           </div>
+
 
           {/* Branches */}
           <div className="lg:col-span-3">
@@ -178,6 +184,7 @@ function Footer() {
               ))}
             </div>
           </div>
+
 
           {/* Contact */}
           <div className="lg:col-span-3">
@@ -213,7 +220,7 @@ function Footer() {
 
             <Link
               to="/contact"
-              className="group mt-5 inline-flex items-center gap-3 rounded-full bg-[#D4AD28] px-5 py-2.5 text-[11px] font-bold text-[#354126] transition hover:bg-[#E8C84F]"
+              className="group mt-5 inline-flex items-center gap-3 rounded-full bg-[#D4AD28] px-5 py-2.5 text-[11px] font-bold text-[#111111] transition hover:bg-[#E8C84F]"
             >
               CONTACT US
 
@@ -225,6 +232,7 @@ function Footer() {
           </div>
 
         </div>
+
 
         {/* Copyright */}
         <div className="flex flex-col items-center justify-between gap-3 pt-5 text-center sm:flex-row sm:text-left">

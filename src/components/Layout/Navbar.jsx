@@ -22,7 +22,7 @@ function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-[#424B27] shadow-md">
+    <header className="sticky top-0 z-50 w-full bg-[#111111] shadow-lg shadow-black/20">
 
       <div className="mx-auto flex h-[72px] max-w-[1440px] items-center justify-between px-5 sm:px-8 lg:px-14">
 
@@ -33,12 +33,13 @@ function Navbar() {
           className="group flex shrink-0 items-center gap-2.5"
         >
           <div className="relative flex h-11 w-11 items-center justify-center rounded-full border border-[#D4AD28]/60 bg-[#D4AD28]/10 transition-all duration-300 group-hover:rotate-[-8deg] group-hover:bg-[#D4AD28]">
+
             <FaBicycle
               size={23}
-              className="text-[#D4AD28] transition-all duration-300 group-hover:scale-110 group-hover:text-[#424B27]"
+              className="text-[#D4AD28] transition-all duration-300 group-hover:scale-110 group-hover:text-[#111111]"
             />
 
-            <span className="absolute -bottom-1 -right-1 h-3 w-3 rounded-full border-2 border-[#424B27] bg-[#D4AD28]" />
+            <span className="absolute -bottom-1 -right-1 h-3 w-3 rounded-full border-2 border-[#111111] bg-[#D4AD28]" />
           </div>
 
           <div className="flex flex-col">
@@ -63,6 +64,7 @@ function Navbar() {
             >
               {({ isActive }) => (
                 <span className="relative block">
+
                   <span
                     className={`text-[13px] font-semibold tracking-wide transition-colors duration-300 ${
                       isActive
@@ -78,20 +80,21 @@ function Navbar() {
                       isActive ? "w-full" : "w-0 group-hover:w-full"
                     }`}
                   />
+
                 </span>
               )}
             </NavLink>
           ))}
         </nav>
 
-        {/* CONTACT BUTTON */}
+        {/* DESKTOP CONTACT BUTTON */}
         <Link
           to="/contact"
-          className="group hidden items-center gap-2 rounded-full bg-[#D4AD28] py-1.5 pl-5 pr-1.5 text-[10px] font-extrabold tracking-[0.8px] text-[#424B27] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#E8C84F] lg:flex"
+          className="group hidden items-center gap-2 rounded-full bg-[#D4AD28] py-1.5 pl-5 pr-1.5 text-[10px] font-extrabold tracking-[0.8px] text-[#111111] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#E8C84F] lg:flex"
         >
           <span>LET'S CONNECT</span>
 
-          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#424B27] text-[#D4AD28] transition-all duration-300 group-hover:rotate-45 group-hover:bg-[#F8F7F0] group-hover:text-[#424B27]">
+          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#111111] text-[#D4AD28] transition-all duration-300 group-hover:rotate-45 group-hover:bg-[#F8F7F0] group-hover:text-[#111111]">
             <FiArrowUpRight size={17} />
           </span>
         </Link>
@@ -102,7 +105,7 @@ function Navbar() {
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label={menuOpen ? "Close navigation" : "Open navigation"}
           aria-expanded={menuOpen}
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-[#D4AD28]/50 text-[#D4AD28] transition-all duration-300 hover:bg-[#D4AD28] hover:text-[#424B27] lg:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-[#D4AD28]/50 text-[#D4AD28] transition-all duration-300 hover:bg-[#D4AD28] hover:text-[#111111] lg:hidden"
         >
           {menuOpen ? <FiX size={21} /> : <FiMenu size={21} />}
         </button>
@@ -118,7 +121,8 @@ function Navbar() {
         }`}
       >
         <div className="overflow-hidden">
-          <nav className="border-t border-white/10 bg-[#354126] px-6 pb-6 pt-4">
+
+          <nav className="border-t border-white/10 bg-[#111111] px-6 pb-6 pt-4">
 
             <p className="mb-2 text-[10px] font-bold uppercase tracking-[2px] text-[#D4AD28]">
               Explore Philip
@@ -139,12 +143,15 @@ function Navbar() {
                 }
               >
                 <div className="flex items-center gap-4">
+
                   <span className="text-[10px] font-bold text-[#D4AD28]">
                     0{index + 1}
                   </span>
+
                   <span className="text-sm font-semibold">
                     {link.name}
                   </span>
+
                 </div>
 
                 <FiChevronRight
@@ -154,14 +161,15 @@ function Navbar() {
               </NavLink>
             ))}
 
+            {/* MOBILE CTA */}
             <Link
               to="/contact"
               onClick={() => setMenuOpen(false)}
-              className="mt-5 flex items-center justify-between rounded-full bg-[#D4AD28] py-2 pl-5 pr-2 text-xs font-bold text-[#424B27]"
+              className="mt-5 flex items-center justify-between rounded-full bg-[#D4AD28] py-2 pl-5 pr-2 text-xs font-bold text-[#111111] transition hover:bg-[#E8C84F]"
             >
               LET'S CONNECT
 
-              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#424B27] text-[#D4AD28]">
+              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#111111] text-[#D4AD28]">
                 <FiArrowUpRight size={19} />
               </span>
             </Link>
